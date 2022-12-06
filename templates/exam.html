@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'pages/header.html' %}
+    <meta charset="UTF-8">
+    <title>Exam page  </title>
+</head>
+<body>
+<h1 class="alert-info">{{   message }}</h1>
+<form action="" method="POST" class="form-control">
+    {% csrf_token %}
+    <label class=" form-label">Question</label>
+<input class="form-control" type="text" placeholder="Question" name="question">
+<label class="form-label">Answer</label>
+    <input class="form-control" type="text" placeholder="Answer" name="answer">
+    <br/>
+<input class="form-control btn-primary" type="submit" value="Save" >
+</form>
+</body>
+<footer>
+    {% include 'pages/footer.html' %}
+</footer>
+</html>
